@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ApolloDriver } from '@nestjs/apollo';
 import { AppResolver } from './app.resolver';
+import { UserModule } from './api/user/user.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { AppResolver } from './app.resolver';
           username: configService.get<string>('DB_USERNAME'),
           password: configService.get<string>('DB_PASSWORD'),
           database: configService.get<string>('DB_DATABASE'),
+          entities: [join(__dirname, 'entities', '*.entity.{ts,js}')],
           synchronize: false,
         };
       },
@@ -33,6 +35,7 @@ import { AppResolver } from './app.resolver';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema/schema.gql'),
     }),
+    UserModule,
   ],
   controllers: [],
   providers: [AppService, AppResolver],
