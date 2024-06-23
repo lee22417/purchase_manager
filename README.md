@@ -32,3 +32,9 @@ $ npm run start:prod
 ```bash
 http://localhost:3000/graphql
 ```
+
+## Public
+
+```bash
+http://localhost:3000/db/user_purchase_status_column.txt
+```
