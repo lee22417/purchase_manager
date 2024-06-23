@@ -12,5 +12,5 @@ export class Product {
   expired_at: number;
 
   @Column({ nullable: false })
-  data: Text;
+  data: string;
 }
