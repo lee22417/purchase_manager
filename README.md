@@ -1,7 +1,9 @@
 ## purchase_manger
+
 - NestJS with GraphQL
 
 ##
+
 - NestJS, NodeJS, typescript, GraphQL, MYSQL
 - TypeORM, JWT, esLint, Prettier, Swagger
 - MacOS (M2), VS code, Postman, Github
@@ -25,15 +27,8 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## GraphQL
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+http://localhost:3000/graphql
 ```
